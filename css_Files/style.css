@@ -1,0 +1,146 @@
+*{margin: 0; padding: 0; box-sizing: border-box;}
+:root{
+    --bs-primary-rgb: 116, 205, 219;
+    --bs-primary-color: rgb(116, 205, 219);
+    --second-color:#005aa6;
+    --third-color:#F6F4F0;
+}
+
+.register-btn{
+    color:var(--second-color);
+
+}
+.register-icon{
+    color: var(--second-color);
+}
+.form-control{
+    border: solid 1px var(--second-color);
+}
+
+.regist-text{
+    color: var(--second-color);
+}
+input:-ms-input-placeholder { /* IE 10+ */
+    opacity: 0;
+  }
+.error{
+    font-size: smaller;
+}
+
+.img-logo{
+    width:220px;
+}
+
+.nav-items{
+    color: var(--second-color);
+}
+.nav-bar{
+    background-color: var(--third-color);
+    position: fixed;
+    width: 100%;
+    z-index: 1;
+    margin-top: 0;
+}
+.space{
+    height: 100px;
+}
+.welcome-msg{
+    color: var(--third-color);
+    background-color: var(--second-color);
+}
+
+.courses ,.course-details{
+    color: var(--second-color);
+}
+.Home , .My-courses{
+    cursor: pointer;
+}
+.course-card{
+    border:solid 2px var(--bs-primary-color);
+    max-width: 30%;
+    transition: 0.4s;
+    margin: auto;
+}
+.course-card:hover{
+    box-shadow: 5px 5px 25px #cfcfcf;
+}
+.card-body{
+    max-width:95%;
+    color: var(--second-color);
+}
+.image-and-title{
+    position: relative;
+}
+.image-and-title img{
+    width:100%;
+}
+.image-and-title p{
+    color: var(--second-color);
+    font-size: smaller;
+    position: absolute;
+    background-color:rgba(246, 244, 240,0.8);
+    padding: 5px;
+    top: 10px;
+    left :10px
+}
+.lessons{
+    font-size: smaller;
+}
+.info{
+    background-color:rgba(246, 244, 240,0.8) ;
+    border-radius: 5px;
+    padding: 3px 10px;
+}
+.instructor-img{
+    width: 50px;
+    border-radius: 50%;
+    border: solid 1px var(--second-color);
+}
+.instruct-name,.price{
+    font-weight: 500;
+}
+.price{
+    font-size: 30px;
+}
+.year{
+    opacity: 0.8;
+}
+.Join-btn{
+    width: 50%;
+}
+
+.detail-body{
+    /* border: solid 2px var(--second-color); */
+    background-color: var();
+}
+.details{
+    background-color: var(--third-color);
+    color: var(--second-color);
+}
+.course-title ,.about ,.course-learn ,.learn-all{
+    color: var(--second-color);
+
+}
+.about{
+    font-size: larger;
+}
+.learn-all{
+    padding-bottom: 40px;
+}
+.checkout{
+    color: var(--second-color);
+
+}
+@media (max-width : 1200px) {
+    .course-card{
+        max-width: 45%;
+    }
+
+}
+@media (max-width : 760px) {
+    .course-card{
+        max-width: 90%;
+    }
+
+}
+
