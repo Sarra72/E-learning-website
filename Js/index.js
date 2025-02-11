@@ -110,7 +110,7 @@ function displayName(){
  
 document.addEventListener('DOMContentLoaded', function () {
      
-    const currentPage = window.location.pathname.toLowerCase();
+    const currentPage = window.location.pathname;
     const JoinBtns= document.querySelectorAll(".Join-btn");
     const checkout = document.querySelector(".checkout");
     const paymentPart = document.querySelector(".pay-part");
@@ -122,13 +122,13 @@ document.addEventListener('DOMContentLoaded', function () {
     
     JoinBtns.forEach(button => {
         button.addEventListener('click', () => {
-            window.location.href="coursedetails.html";
+            window.location.href="courseDetails.html";
     });
     });
   
 
 }
-if (currentPage.includes('coursedetails.html')) {
+if (currentPage.includes('courseDetails.html')) {
     console.log('Course Details Page Loaded');  // Debugging message
 
     checkout.addEventListener('click', () => {
