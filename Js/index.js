@@ -122,7 +122,7 @@ document.addEventListener('DOMContentLoaded', function () {
     
     JoinBtns.forEach(button => {
         button.addEventListener('click', () => {
-            window.open("coursedetails.html");
+            window.location.href="coursedetails.html";
     });
     });
   
