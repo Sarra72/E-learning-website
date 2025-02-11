@@ -5,7 +5,9 @@
     --second-color:#005aa6;
     --third-color:#F6F4F0;
 }
-
+body{
+    overflow-x: hidden;
+}
 .register-btn{
     color:var(--second-color);
 
@@ -113,11 +115,20 @@ input:-ms-input-placeholder { /* IE 10+ */
     /* border: solid 2px var(--second-color); */
     background-color: var();
 }
+.detail-body{
+    width: 60%;
+}
 .details{
+    width: 100%;
     background-color: var(--third-color);
     color: var(--second-color);
 }
-.course-title ,.about ,.course-learn ,.learn-all{
+/* .ui-ux-img {
+    filter: invert(29%) sepia(91%) saturate(1296%) hue-rotate(170deg) brightness(90%) contrast(100%);
+    min-width:60px;
+} */
+  
+.course-title ,.about ,.course-learn ,.learn-all ,.description ,.Fprice{
     color: var(--second-color);
 
 }
@@ -127,20 +138,60 @@ input:-ms-input-placeholder { /* IE 10+ */
 .learn-all{
     padding-bottom: 40px;
 }
+.Fprice{
+    padding-bottom: 5px;
+}
 .checkout{
     color: var(--second-color);
-
 }
+.payment{
+    width: 300px;
+}
+.paym-contain{
+    width: 65%;
+}
+.pay-icons{
+    color: var(--second-color);
+}
+.pay-btn{
+    color: var(--second-color);
+}
+.pay-part-close{
+    position: relative;
+    top: -600px;
+    opacity: 0;
+    transition: 0.4s ease-out;
+}
+.pay-part{
+    top: 600px;
+    transition: 0.4s ease-out;
+}
+
 @media (max-width : 1200px) {
     .course-card{
         max-width: 45%;
     }
+    .details{
+        width:100%;
+    }
 
+}
+@media (max-width : 970px){
+    
+    .learn-all{
+        flex-direction: column;
+        gap: 0;
+    }
 }
 @media (max-width : 760px) {
     .course-card{
         max-width: 90%;
     }
-
+    
 }
-
+@media (max-width : 440px) {
+    .space{
+        height: 150px;
+    }
+    
+}
