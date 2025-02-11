@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="icon" href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRUKaTJjbh5N37El4LZAcV8wdwc4LWI8gA3iw&s">
+    <link rel="stylesheet" href="css_Files/all.css">
+    <link rel="stylesheet" href="css_Files/bootstrap.min.css">
+    <link rel="stylesheet" href="css_Files/style.css">
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11.7.1/dist/sweetalert2.min.css"
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.7.1/dist/sweetalert2.all.min.js"></script>
+    <title>Course details</title>
+</head>
+<body>
+    <nav class="nav-bar p-1 shadow-sm">
+        <div class="container d-flex justify-content-between align-items-center flex-wrap">
+            <div class="logo py-1">
+                <img src="https://learning.elarabygroup.com/pluginfile.php/1/theme_edly/main_logo/1735972074/eLearning%20Dark%20Logo%20%281%29.png" class="img-logo " alt="e-learning logo image">
+            </div>
+
+            <div class="nav-items d-flex gap-4 fs-5 fw-bold">
+                <div class="Home" href="homePage.html">Home</div>
+                <div class="My-courses" >My Courses</div>
+            </div>
+        </div>
+    </nav>
+
+    <div class="space"></div>
+
+    <div class="detail-body  border border-2 rounded-3 m-auto">
+        <h4 class="course-details text-center py-2">UI-UX Course Details</h4>
+    <div class="details rounded-3 m-auto">
+        <div class=" text-light text-start w-100 m-auto p-3 px-4 ">
+            
+            <p class="course-title fs-4  py-3 fw-bold ">
+                Figma, Miro, Sketch, Adobe XD, UsabilityHub: <br>
+                <b>UI/UX Tools</b>
+            </p>
+            
+            <p class="description fs-4"><b>Description:</b></p>
+            <p class="about text-start text-start ">Lorem ipsum dolor sit amet! Totam sapiente, eveniet amet quas magni recusandae nihil vel accusantium non praesentium maiores rerum nemo. Temporibus, dignissimos atque.</p>
+            <br>
+            <p class="course-learn fw-bold text-start  fs-4">What you'll learn:</p>
+            
+            <div class="learn-all d-flex gap-4">
+                <div class="learn1 flex-column d-flex gap-3">
+                    <div class="info-learn">
+                        <i class="fa-solid fa-check"></i>
+                        <span>Lorem ipsum dolor sit amet.</span>
+                    </div>
+                    <div class="learn">
+                        <i class="fa-solid fa-check"></i>
+                        <span>Lorem, ipsum dolor.</span>
+                    </div>
+                    <div class="learn">
+                        <i class="fa-solid fa-check"></i>
+                        <span>Lorem ipsum dolor sit amet consectetur adipisicing.</span>
+                    </div>
+                </div>
+                <div class="learn2 flex-column d-flex gap-3">
+                    <div class="learn">
+                        <i class="fa-solid fa-check"></i>
+                        <span>Lorem, ipsum dolor.</span>
+                    </div>
+                    <div class="learn">
+                        <i class="fa-solid fa-check"></i>
+                        <span>Lorem ipsum dolor sit.</span>
+                    </div>
+                    <div class="learn">
+                        <i class="fa-solid fa-check"></i>
+                        <span>Lorem ipsum dolor sit.</span>
+                    </div>
+                </div>
+                
+                
+             </div>
+             <div class="Fprice">Price: <b>$480.00</b> /year</div>
+
+             <button class="checkout btn bg-primary fw-bold w-100 fs-4 shadow-sm"> Checkout </button>
+        </div>
+
+        <div class="payment-container">
+            <div class="payment">
+
+            </div>
+        </div>
+    </div>
+
+    </div>
+        
+        <div class="pay-part h-100 pay-part-close">
+          <div class="row d-flex justify-content-center align-items-center ">
+            <div class="col-lg-12 col-xl-11 ">
+              <div class=" border border-1 rounded-3 paym-contain m-auto" >
+                <div class=" p-md-5 ">
+                  <div class="row justify-content-center text-light text-start w-100 m-auto p-3 px-4 ">
+                    <div class="col-md-10 col-lg-6 col-xl-5 order-2 order-lg-1 ">
+      
+                      <p class="text-center h1 fw-bold mb-5 mx-1 mx-md-4 mt-4 regist-text">Payment</p>
+      
+                      <form class="mx-1 mx-md-4" id="form" onsubmit="">
+      
+                        <div class="d-flex flex-row align-items-center mb-4">
+                          <i class="fas fa-solid fa-credit-card me-3 fa-fw pay-icons"></i>
+                          <div data-mdb-input-init class="form-outline flex-fill mb-0">
+                            <input type="number" id="username" class="form-control rounded-5 shadow-none" placeholder="Card Number" />
+                            <div class="error px-3 text-danger"></div>
+                          </div>
+                        </div>
+      
+                        <div class="d-flex flex-row align-items-center mb-4">
+                            <i class="fas fa-regular fa-calendar-days me-3 fa-fw pay-icons"></i>
+                          <div data-mdb-input-init class="form-outline flex-fill mb-0">
+                            <input  id="email" class="form-control rounded-5 shadow-none" placeholder="MM/YY (Expiry date)" />
+                            <div class="error px-3 text-danger"></div>
+                          </div>
+                        </div>
+      
+                        <div class="d-flex flex-row align-items-center mb-4">
+                            <i class="fas fa-solid fa-circle-question me-3 fa-fw pay-icons"></i>
+                          <div data-mdb-input-init class="form-outline flex-fill mb-0">
+                            <input type="number" id="pass1" class="form-control rounded-5 shadow-none" placeholder="CVV" />
+                            <div class="error px-3 text-danger"></div>
+                          </div>
+                        </div>
+      
+                        <div class="d-flex flex-row align-items-center mb-4">
+                            <i class="fas fa-envelope fa-lg me-3 fa-fw register-icon"></i>
+                            <div data-mdb-input-init class="form-outline flex-fill mb-0">
+                              <input  id="email" class="form-control rounded-5 shadow-none" placeholder="Your Email" />
+                              <div class="error px-3 text-danger"></div>
+                            </div>
+                          </div>
+      
+                        
+                        <div class="d-flex justify-content-center mx-4 mb-3 mb-lg-4">
+                          <button  type="submit" class="btn btn-primary btn-lg fs-6 bg-primary border-0 fw-bold shadow-sm pay-btn" >PAY NOW</button>
+                        </div>
+      
+                      </form>
+      
+                    </div>
+                    <div class="col-md-10 col-lg-6 col-xl-7 d-flex align-items-center order-1 order-lg-2">
+      
+                      <img src="https://cdn-icons-png.flaticon.com/512/3110/3110444.png"
+                        class="img-fluid payment" alt="payment image">
+      
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      <script src="Js/index.js"></script>
+</body>
+</html>
