@@ -4,6 +4,8 @@ const passInput1 = document.getElementById("pass1");
 const passInput2 = document.getElementById("pass2");
 const email = document.getElementById("email");
 
+
+
 function handleSubmit(e){
     e.preventDefault();
     
@@ -104,24 +106,46 @@ function displayName(){
     nameWelcome.innerHTML=("Welcome, " + localStorage.getItem('Username'));
 }
 
+
+ 
 document.addEventListener('DOMContentLoaded', function () {
-    const currentPage = window.location.pathname;  
+     
+    const currentPage = window.location.pathname.toLowerCase();
     const JoinBtns= document.querySelectorAll(".Join-btn");
-    if (currentPage.includes('homePage.html')) {
+    const checkout = document.querySelector(".checkout");
+    const paymentPart = document.querySelector(".pay-part");
+    const payBtn = document.querySelector(".pay-btn");
+
+
+    if (currentPage.includes('homepage.html')) {
         displayName();
     
     JoinBtns.forEach(button => {
         button.addEventListener('click', () => {
-        window.open("Course details.html", "_blank");   
+            window.open("coursedetails.html");
     });
+    });
+  
+
+}
+if (currentPage.includes('coursedetails.html')) {
+    console.log('Course Details Page Loaded');  // Debugging message
+
+    checkout.addEventListener('click', () => {
+        paymentPart.classList.remove('pay-part-close');
+        paymentPart.scrollIntoView({ behavior: 'smooth' });
+    });
+
+    payBtn.addEventListener('click', () => {
+    //     Swal.fire({
+    //     title: 'Payment Successful!',
+    //     text: 'Your payment has been processed successfully.',
+    //     icon: 'success',
+    //     confirmButtonText: 'OK'
+    // });
+
+    alert("Your payment has been processed successfully.")
     });
 }
-     else{
-        return;
-    }
-
 });
 
-function transformToDetails(){
-    
-}
