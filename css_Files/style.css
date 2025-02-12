@@ -182,6 +182,9 @@ input:-ms-input-placeholder { /* IE 10+ */
         flex-direction: column;
         gap: 0;
     }
+    .paym-contain,.detail-body{
+        width: 90%;
+    }
 }
 @media (max-width : 760px) {
     .course-card{
