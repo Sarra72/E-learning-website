@@ -56,6 +56,7 @@ input:-ms-input-placeholder { /* IE 10+ */
 }
 .Home , .My-courses{
     cursor: pointer;
+    color: var(--second-color);
 }
 .course-card{
     border:solid 2px var(--bs-primary-color);
@@ -144,9 +145,9 @@ input:-ms-input-placeholder { /* IE 10+ */
 .checkout{
     color: var(--second-color);
 }
-.payment{
+/* .payment{
     width: 300px;
-}
+} */
 .paym-contain{
     width: 65%;
 }
