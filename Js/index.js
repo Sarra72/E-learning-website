@@ -5,7 +5,6 @@ const passInput2 = document.getElementById("pass2");
 const email = document.getElementById("email");
 
 
-
 function handleSubmit(e){
     e.preventDefault();
     
@@ -106,7 +105,63 @@ function displayName(){
     nameWelcome.innerHTML=("Welcome, " + localStorage.getItem('Username'));
 }
 
+function vaildCardNumber(){
+    
+    const cardNumber = document.getElementById('card-num');
+    if(cardNumber.value.trim() === ''){
+        setValidate(cardNumber,'Enter your card number');
+        return false;
+    }else if(!/^\d{16}$/.test(cardNumber.value.trim())){
+        setValidate(cardNumber,'Card number must be 16 digits.');
+        return false;
+    }else{
+        setSuccess(cardNumber);
+        return true;
+    }
+}
 
+function validExpiryDate(){
+
+    const expiryDate = document.getElementById('expiry-date');
+    if(expiryDate.value.trim()===''){
+        setValidate(expiryDate,'Enter the Expiry date');
+        return false;
+    }else if(!/^(0[1-9]|1[0-2])\/\d{2}$/.test(expiryDate.value.trim())){
+        setValidate(expiryDate,'Enter a valid expiry date (MM/YY).');
+        return false;
+    }else{
+        setSuccess(expiryDate);
+        return true;
+    }
+}
+
+function validCvv(){
+    const cvv = document.getElementById('cvv');
+    if(cvv.value.trim()===''){
+        setValidate(cvv,'Enter the CVV');
+        return false;
+    }else if(!/^\d{3,4}$/.test(cvv.value.trim())){
+        setValidate(cvv,'CVV must be 3 digits.');
+        return false;
+    }else{
+        setSuccess(cvv);
+        return true;
+    }
+}
+
+function validEmailPay(){
+    const email = document.querySelector('#email');
+    if(email.value.trim() === ''){
+        setValidate( email , 'Email is required');
+        return false;
+    }else if(!isValidEmail(email.value.trim())){
+        setValidate( email , 'Enter a valid email address');
+        return false;
+    }else if(isValidEmail(email.value.trim())){
+        setSuccess(email);
+        return true;
+    }
+}
  
 document.addEventListener('DOMContentLoaded', function () {
      
@@ -114,7 +169,8 @@ document.addEventListener('DOMContentLoaded', function () {
     const JoinBtns= document.querySelectorAll(".Join-btn");
     const checkout = document.querySelector(".checkout");
     const paymentPart = document.querySelector(".pay-part");
-    const payBtn = document.querySelector(".pay-btn");
+
+
 
 
     if (currentPage.includes('homepage.html')) {
@@ -122,31 +178,39 @@ document.addEventListener('DOMContentLoaded', function () {
     
     JoinBtns.forEach(button => {
         button.addEventListener('click', () => {
-            window.location.href="courseDetails.html";
+            window.location.href="coursedetails.html";
     });
     });
-  
 
-}
-if (currentPage.includes('coursedetails.html')) {
-    console.log('Course Details Page Loaded');  // Debugging message
+    }
 
-    checkout.addEventListener('click', () => {
-        paymentPart.classList.remove('pay-part-close');
-        paymentPart.scrollIntoView({ behavior: 'smooth' });
-    });
 
-    payBtn.addEventListener('click', () => {
-    //     Swal.fire({
-    //     title: 'Payment Successful!',
-    //     text: 'Your payment has been processed successfully.',
-    //     icon: 'success',
-    //     confirmButtonText: 'OK'
-    // });
+    if (currentPage.includes('coursedetails.html')) {
 
-    alert("Your payment has been processed successfully.")
-    });
-}
+        checkout.addEventListener('click', () => {
+            paymentPart.classList.remove('pay-part-close');
+            paymentPart.scrollIntoView({ behavior: 'smooth' });
+        });
+
+        document.getElementById('form').addEventListener('submit', function (event) {
+            event.preventDefault();  
+
+            if (vaildCardNumber() && validExpiryDate() && validCvv() && validEmailPay()) {
+                Swal.fire({
+                    title: 'Payment Successful!',
+                    text: 'Your payment has been processed successfully.',
+                    icon: 'success',
+                    confirmButtonText: 'OK'
+                  }).then((result) => {
+                    if (result.isConfirmed) {
+                      this.submit();
+                    }
+                  });
+            }
+        });
+
+
+    }
 });
 
 
