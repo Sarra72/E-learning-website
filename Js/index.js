@@ -165,7 +165,7 @@ function validEmailPay(){
  
 document.addEventListener('DOMContentLoaded', function () {
      
-    const currentPage = window.location.pathname.toLowerCase();
+    const currentPage = window.location.pathname;
     const JoinBtns= document.querySelectorAll(".Join-btn");
     const checkout = document.querySelector(".checkout");
     const paymentPart = document.querySelector(".pay-part");
@@ -173,7 +173,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
 
 
-    if (currentPage.includes('homepage.html')) {
+    if (currentPage.includes('homePage.html')) {
         displayName();
     
     JoinBtns.forEach(button => {
@@ -185,7 +185,7 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 
 
-    if (currentPage.includes('coursedetails.html')) {
+    if (currentPage.includes('courseDetails.html')) {
 
         checkout.addEventListener('click', () => {
             paymentPart.classList.remove('pay-part-close');
